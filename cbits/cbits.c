@@ -65,16 +65,16 @@ static const uint8_t base64d[BASE64D_SIZE] = {
 };
 
 static const uint16_t base64states[UTF7_B64_STATES] = {
-	PACK_STATE(UTF7_B64_AMP, UTF7_CONT, false, false, 0), //invalid
-	PACK_STATE(UTF7_B64_2, UTF7_CONT, false, false, 10),
+	0, //invalid
+	PACK_STATE(UTF7_B64_2, UTF7_CONT,   false, false, 10),
 	PACK_STATE(UTF7_B64_3, UTF7_REJECT, false, false, 4),
-	PACK_STATE(UTF7_B64_4, UTF7_REJECT, false, true, 2),
-	PACK_STATE(UTF7_B64_5, UTF7_CONT, false, false, 8),
+	PACK_STATE(UTF7_B64_4, UTF7_REJECT, false, true,  2),
+	PACK_STATE(UTF7_B64_5, UTF7_CONT,   false, false, 8),
 	PACK_STATE(UTF7_B64_6, UTF7_REJECT, false, false, 2),
-	PACK_STATE(UTF7_B64_7, UTF7_REJECT, false, true, 4),
-	PACK_STATE(UTF7_B64_8, UTF7_CONT, false, false, 6),
-	PACK_STATE(UTF7_B64_1, UTF7_REJECT, false, true, 0),
-	PACK_STATE(UTF7_B64_2, UTF7_ACCEPT, true, false, 10)
+	PACK_STATE(UTF7_B64_7, UTF7_REJECT, false, true,  4),
+	PACK_STATE(UTF7_B64_8, UTF7_CONT,   false, false, 6),
+	PACK_STATE(UTF7_B64_1, UTF7_REJECT, false, true,  0),
+	PACK_STATE(UTF7_B64_2, UTF7_ACCEPT, true,  false, 10)
 };
 
 static inline _Bool
