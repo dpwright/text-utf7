@@ -1,6 +1,8 @@
 text-utf7
 =========
 
+[![Build Status](https://travis-ci.org/dpwright/text-utf7.svg?branch=master)](https://travis-ci.org/dpwright/text-utf7)
+
 This module provides UTF-7 encoding/decoding for `Data.Text` values in Haskell.
 It is based very closely on the equivalent UTF-8 functions in `Data.Text`
 itself.
