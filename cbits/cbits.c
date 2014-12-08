@@ -208,6 +208,7 @@ _hs_text_encode_utf7(uint8_t **destp, const uint16_t *src, size_t srcoff,
 	const uint16_t *srcend;
 	uint8_t *dest = *destp;
 	_Bool inAsciiBlock = true;
+	int i = 0;
 
 	src += srcoff;
 	srcend = src + srclen;
@@ -268,7 +269,7 @@ _hs_text_encode_utf7(uint8_t **destp, const uint16_t *src, size_t srcoff,
 					}
 				}
 
-				for(int i = 0; i < bytes; ++i)
+				for(i = 0; i < bytes; ++i)
 					*dest++ = base64e[indices[i]];
 			}
 		}
